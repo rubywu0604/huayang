@@ -1,0 +1,151 @@
+:root{--bg:#ffffff;--muted:#666;--accent:#0b6cff}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5;color:#111;margin:0;background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.site-header{border-bottom:1px solid #eee;background:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem}
+.logo {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.brand {
+  font-size: 1.4rem; /* 品牌文字 */
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--accent);
+  text-decoration: none;
+}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.hero{padding:1.0rem 0;text-align:center;background:linear-gradient(180deg,#f7fbff,white)}
+.hero h1{font-size:clamp(1.6rem,3vw,2.6rem);}
+.highlight {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: #e74755;
+}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{border:1px solid #eee;padding:1.25rem;border-radius:8px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+.about{padding:2rem 0}
+.contact form{display:grid;gap:.6rem;max-width:560px}
+.contact input,.contact textarea{width:100%;padding:.6rem;border:1px solid #ddd;border-radius:6px}
+.btn{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
+.site-footer{border-top:1px solid #eee;padding:0.5rem 0;text-align:center;color:var(--muted)}
+
+.about p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.company-values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.company-values li {
+  background: #f9fafb;
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  line-height: 1.6;
+}
+
+.company-values strong {
+  color: var(--accent);
+}
+
+.company-info {
+  display: flex;
+  flex-wrap: wrap;   /* 小螢幕換行 */
+  gap: 2rem;         /* 每個資訊間距 */
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.company-info span {
+  white-space: nowrap;  /* 單行顯示 */
+}
+
+.carousel {
+  max-width: 900px;        /* 限制輪播寬度 */
+  height: 300px;           /* 高度固定，可調整 */
+  display: flex;            /* 使用 flex */
+  justify-content: center;  /* 水平置中 */
+  align-items: center;      /* 垂直置中 */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slides img {
+  position: absolute;       /* 保持輪播切換效果 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 水平+垂直置中 */
+  width: auto;              
+  max-width: 100%;         
+  max-height: 100%;         /* 高度自適應容器 */
+  object-fit: contain;      
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slides img.active {
+  opacity: 1;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;  /* 垂直排列 */
+  gap: 1rem;              /* 每張圖片間距 */
+  align-items: center;    /* 置中對齊 */
+}
+
+.photos img {
+  max-width: 1000px;       /* 控制圖片最大寬度 */
+  width: 100%;            /* 自適應容器 */
+  height: auto;           /* 高度自動 */
+  border-radius: 6px;
+}
+
+#backToTop {
+  display: none;            /* 預設隱藏 */
+  position: fixed;          /* 固定在視窗 */
+  bottom: 40px;             /* 距離底部 */
+  right: 40px;              /* 距離右側 */
+  z-index: 100;             /* 保持在最上層 */
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background-color: #0a5acc;
+  transform: translateY(-2px);
+}
+
+.site-header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: sticky;   /* 讓 header sticky */
+  top: 0;             /* 固定在頂部 */
+  z-index: 1000;      /* 確保 header 在最上層 */
+}

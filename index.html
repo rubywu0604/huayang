@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>華陽鋼板股份有限公司</title>
+  <meta name="description" content="Hua Yang Steel Plate Company Limited" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+        <a class="brand" href="/">
+        <img src="images/logo.png" alt="logo" class="logo">
+        華陽鋼板股份有限公司
+        </a>
+        <nav class="nav">
+        <a href="#services">專營項目</a>
+        <a href="quality.html">品質管理</a>
+        <a href="#about">關於公司</a>
+        <a href="#contact">洽談合作</a>
+        </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+        <div class="container">
+            <h1>新一代鋼板技術&nbsp;&nbsp;&nbsp;高品質在地服務</h1>
+            <p><span class="highlight">獨家代理</span>&nbsp;&nbsp;鋼板製造 · 零件製作 · 研磨精整 — 用品質奠定企業基石，以專業服務締造長期合作！</p>
+        </div>
+    </section>
+
+    <section class="carousel container">
+        <div class="carousel-slides">
+            <img src="images/sample1.png" alt="Sample 1">
+            <img src="images/sample2.png" alt="Sample 2">
+            <img src="images/sample3.png" alt="Sample 3">
+            <img src="images/sample4.png" alt="Sample 4">
+            <img src="images/sample5.png" alt="Sample 5">
+        </div>
+    </section>
+
+    <section id="services" class="container cards">
+      <article class="card">
+        <h3>鋼板製造</h3>
+        <p>專注於製造高性能 SUS420／SUS630+ 精密鏡面壓合鋼板。</p>
+        <!-- <p>結合先進的壓合與表面處理技術，具備優異的平整度、光滑度與耐蝕性。</p> -->
+      </article>
+      <article class="card">
+        <h3>零件製作</h3>
+        <p>提供乘載盤、上蓋板與 PIN LAN 等零組件的客製化加工與製作服務。</p>
+        <!-- <p>依據客戶需求精準控制尺寸與表面品質，確保零件完美配合並滿足電子、半導體及自動化設備的嚴格需求。</p> -->
+      </article>
+      <article class="card">
+        <h3>研磨精整</h3>
+        <p>提供壓合鋼板精密研磨服務，確保板材表面具備優異的細緻度。</p>
+      </article>
+    </section>
+
+    <section id="about" class="container about">
+        <h2>關於公司</h2>
+        <p>
+            華陽鋼板股份有限公司秉持「<strong>最優良的品質、具競爭力的價格、完美的交期、完善的客服、滿足客戶的需求</strong>」為經營宗旨，
+            致力於提供客戶最穩定可靠的鋼板製品與加工服務。
+        </p>
+
+        <ul class="company-values">
+            <li>
+            <strong>交期快速：</strong>
+            5K 內訂單自下單至出貨僅需 <strong>2.5～3 個月</strong>，確保效率與準時交貨。
+            </li>
+            <li>
+            <strong>品質穩定：</strong>
+            鋼板皆經原廠煉解處理，強化材料結構，使硬度與耐用性更高。
+            </li>
+            <li>
+            <strong>鋼板表面：</strong>
+            採用業界最高等級之精密研磨技術，粗糙度最低可達 <strong>0.06 RA</strong>，展現卓越鏡面品質。
+            </li>
+            <li>
+            <strong>價格合理：</strong>
+            與合作鋼廠及自有研發團隊共同精煉生產，達成品質與成本的最佳平衡，
+            提供最具競爭力的價格回饋客戶。
+            </li>
+            <li>
+            <strong>完整售後服務：</strong>
+            專業技術團隊提供在地支援，包括鋼板研磨加工與報廢回收等全方位服務。
+            </li>
+        </ul>
+
+        <div class="company-info">
+            <span>地址：新北市林口區文化二路一段9號</span>
+            <span>登記號碼：60417646</span>
+            <span>負責人：吳彥全</span>
+            <span>電話／傳真：+886-2-2608-1086</span>
+        </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>洽談合作</h2>
+
+      <!-- Form provider: Formspree -->
+      <form action="https://formspree.io/f/manppdnp" method="POST" accept-charset="UTF-8">
+        <p>歡迎留下您的聯絡方式，本公司會儘速與您聯繫</p>
+        <label>
+          姓名
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          聯絡電話
+          <input type="text" name="phone" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          信件內容
+          <textarea name="message" required></textarea>
+        </label>
+        <button type="submit">送出</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+        <small>© <span id="year"></span> Hua Yang Steel Plate Co., Ltd. — All rights reserved.</small>
+    </div>
+  </footer>
+  <button id="backToTop" title="回到頂部">⬆</button>
+
+  <script src="js/carousel.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
